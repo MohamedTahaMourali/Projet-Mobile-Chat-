@@ -20,6 +20,8 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         setContentView(R.layout.activity_home);
 
         // Récupération de la liste des conversations depuis une source de données (par exemple une base de données)
