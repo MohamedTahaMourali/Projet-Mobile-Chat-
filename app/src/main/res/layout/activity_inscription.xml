@@ -10,10 +10,36 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connexion"
+        android:text="Inscription"
         android:textSize="24sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-100dp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_text_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_gray"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prenom"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/light_gray"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"/>
 
     <EditText
         android:id="@+id/edit_text_email"
@@ -25,7 +51,7 @@
         android:backgroundTint="@color/light_gray"
         android:maxLines="1"
         android:padding="12dp"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="16dp"/>
 
     <EditText
         android:id="@+id/edit_text_password"
@@ -40,31 +66,10 @@
         android:layout_marginTop="16dp"/>
 
     <Button
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Se connecter"
-        android:textColor="@color/white"
-        android:background="@color/purple_500"
-        android:textSize="16sp"
-        android:textStyle="bold"
-
-        android:layout_marginTop="32dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ou"
-        android:textSize="16sp"
-        android:textColor="@color/gray"
-        android:textAlignment="center"
-        android:layout_marginTop="24dp"/>
-
-    <Button
         android:id="@+id/button_create_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Créer un compte"
+        android:text="S'inscrire"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

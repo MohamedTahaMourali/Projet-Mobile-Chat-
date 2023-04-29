@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     private ListView mConversationListView;
     private CustomAdapter mConversationListAdapter;
     private List<Conversation> mConversationList;
+    private TextView mUserNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,19 @@ public class HomeActivity extends AppCompatActivity {
         //getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         setContentView(R.layout.activity_home);
+        
+        setContentView(R.layout.activity_home);
+
+        mUserNameTextView = findViewById(R.id.userName);
+        DatabaseHelper mDatabaseHelper = new DatabaseHelper(this, null, null, 1);
+
+        // Récupérer le prénom de l'utilisateur depuis la base de données
+        Intent intent=getIntent();
+        String email = intent.getStringExtra("email");
+        String firstName = mDatabaseHelper.getUsername(email);
+
+        // Mettre à jour le texte du champ de nom utilisateur
+        mUserNameTextView.setText(firstName);
 
         // Récupération de la liste des conversations depuis une source de données (par exemple une base de données)
         mConversationList = getConversationList();
